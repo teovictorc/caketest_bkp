@@ -5,6 +5,9 @@
                                         'full_base' => true
                                         )
       );?>
+<?=$this->Form->create('Post');?>
+<?=$this->Form->input('title');?>
+<?=$this->Form->end('Buscar');?>
 <table>
     <tr>
         <th>Id</th>

@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/xampp/htdocs/cakephp/caketest/View/Posts/index.ctp</file>
             <file>file:/C:/xampp/htdocs/cakephp/caketest/Controller/PostsController.php</file>
-            <file>file:/C:/xampp/htdocs/cakephp/caketest/View/Posts/edit.ctp</file>
+            <file>file:/C:/xampp/htdocs/cakephp/caketest/View/Layouts/default.ctp</file>
+            <file>file:/C:/xampp/htdocs/cakephp/caketest/View/Posts/add.ctp</file>
+            <file>file:/C:/xampp/htdocs/cakephp/caketest/Controller/AppController.php</file>
         </group>
     </open-files>
 </project-private>

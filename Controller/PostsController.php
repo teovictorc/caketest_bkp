@@ -16,7 +16,9 @@ class PostsController extends AppController {
     public $name = 'Posts';
 
     public function index() {
-        $this->set('posts', $this->Post->find('all'));
+        $conditions = $this->postConditions($this->request->data, array('title'=> 'LIKE'));
+        $posts = $this->Post->find('all', compact('conditions'));
+        $this->set('posts', $posts);
     }
 
     public function view($id = null) {
