@@ -26,12 +26,10 @@
                     ); ?>
         </td>
         <td>
-            <?php echo $this->Form->postLink('Excluir',
-                                         array(
-                                            'action' => 'delete',
-                                            $post['Post']['id']
-                                         ),
-                                        array('confirm', "Tem certeza disso?")
+            <?php echo $this->Form->postLink(
+                                        'Excluir',
+                                        array('action' => 'delete', $post['Post']['id']),
+                                        array('confirm' => "Tem certeza disso?")
                     ); ?>
             <?php echo $this->Html->link('Editar',
                                          array(

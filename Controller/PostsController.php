@@ -51,5 +51,10 @@ class PostsController extends AppController {
         if(!$this->request->is('post')){
             throw new MethodNotAllowedException();
         }
+        
+        if($this->Post->delete($id)){
+            $this->Session->setFlash("A postagem com a id: {$id} foi deletada com sucesso.");
+            $this->redirect(array("action" => "index"));
+        }
     }
 }
