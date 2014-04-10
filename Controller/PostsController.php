@@ -13,9 +13,7 @@ App::uses('AppController', 'Controller');
  * @author Téo Victor
  */
 class PostsController extends AppController {
-    public $helpers = array ('Html','Form');
     public $name = 'Posts';
-    public $components = array('Session');
 
     public function index() {
         $this->set('posts', $this->Post->find('all'));
