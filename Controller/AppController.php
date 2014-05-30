@@ -32,9 +32,16 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
     public $helpers = array ('Html','Form');
-    public $components = array('DebugKit.Toolbar','Session');
+    public $components = array('DebugKit.Toolbar',
+                               'Session',
+                               'Auth' => array(
+                                   'loginRedirect'=> array('controller' => 'posts', 'action' => 'index'),
+                                   'logoutRedirect'=> array('controller' => 'pages', 'action' => 'display', 'home')
+                               )
+        );
 
     function beforeFilter() {
+        $this->Auth->allow('index','view');
         parent::beforeFilter();
     }
 }
